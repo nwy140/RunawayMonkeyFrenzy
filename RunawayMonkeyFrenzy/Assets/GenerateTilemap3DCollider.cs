@@ -8,6 +8,7 @@ public class GenerateTilemap3DCollider : MonoBehaviour {
 
 // Spawn cube on all tiles on tilemap
 	public GameObject cube;
+	public Vector3 pixelscale;
 	private Tilemap tilemap;
 	private GameObject playerTarget;
 	public List<Vector3> tileWorldLocations;
@@ -33,7 +34,10 @@ public class GenerateTilemap3DCollider : MonoBehaviour {
 			if (tilemap.HasTile(localPlace))
 			{
 				GameObject spawnedObject = Instantiate(cube, new Vector3(place.x,place.y,0.5f), Quaternion.identity);
-				spawnedObject.GetComponent<Renderer>().material.SetColor("_Color", tilemap.GetSprite(localPlace).texture.GetPixel(0,0));
+				spawnedObject.GetComponent<Renderer>().material.mainTexture = tilemap.GetSprite(localPlace).texture;
+				spawnedObject.GetComponent<Renderer>().material.mainTextureScale = new Vector2( 54 , 54);
+//				spawnedObject.GetComponent<Renderer>().material.mainTextureScale = new Vector2( tilemap.GetSprite(localPlace).pixelsPerUnit , tilemap.GetSprite(localPlace).pixelsPerUnit);			
+//				spawnedObject.GetComponent<Renderer>().material.SetColor("_Color", tilemap.GetSprite(localPlace).texture.GetPixel(0,0));
 				tileWorldLocations.Add(place);
 			}
 		}
@@ -43,6 +47,22 @@ public class GenerateTilemap3DCollider : MonoBehaviour {
 		print("Called");
 	}
 
+	// private void Update() {
+	// 			foreach (var pos in tilemap.cellBounds.allPositionsWithin)
+	// 		{   	
+
+	// 			Vector3Int localPlace = new Vector3Int(pos.x, pos.y, pos.z) ;
+	// 			Vector3 place = tilemap.CellToWorld(localPlace);
+	// 			if (tilemap.HasTile(localPlace))
+	// 			{
+	// 				GameObject spawnedObject = Instantiate(cube, new Vector3(place.x,place.y,0.5f), Quaternion.identity);
+	// 				spawnedObject.GetComponent<Renderer>().material.mainTexture = tilemap.GetSprite(localPlace).texture;
+	// 				spawnedObject.GetComponent<Renderer>().material.mainTextureScale = new Vector2( tilemap.GetSprite(localPlace).pixelsPerUnit , tilemap.GetSprite(localPlace).pixelsPerUnit);			
+	// //				spawnedObject.GetComponent<Renderer>().material.SetColor("_Color", tilemap.GetSprite(localPlace).texture.GetPixel(0,0));
+	// 				tileWorldLocations.Add(place);
+	// 			}
+	// 		}
+	// }
 
 //
 // texture swap https://stackoverflow.com/questions/33150369/how-to-change-the-texture-of-object-at-run-time-on-button-click-in-unity-by-usin
