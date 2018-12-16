@@ -9,6 +9,7 @@ public class GenerateTilemap3DCollider : MonoBehaviour {
 // Spawn spawnPrefabs on all tiles on tilemap
 	public GameObject spawnPrefabs; 
 	public bool setSpawnColor;
+	public float zSpawnPosition = 0;
 	public Vector3 pixelscale; 
 	private Tilemap tilemap;
 	private GameObject playerTarget;
@@ -36,7 +37,7 @@ public class GenerateTilemap3DCollider : MonoBehaviour {
 			Vector3 place = tilemap.CellToWorld(localPlace);
 			if (tilemap.HasTile(localPlace))
 			{
-				GameObject spawnedObject = Instantiate(spawnPrefabs, new Vector3(place.x,place.y,0.5f), Quaternion.identity);
+				GameObject spawnedObject = Instantiate(spawnPrefabs, new Vector3(place.x,place.y,zSpawnPosition), Quaternion.identity);
 //				spawnedObject.GetComponent<Renderer>().material.mainTexture = tilemap.GetSprite(localPlace).texture;
 //				spawnedObject.GetComponent<Renderer>().material.mainTextureScale = new Vector2( 54 , 54);
 //				spawnedObject.GetComponent<Renderer>().material.mainTextureScale = new Vector2( tilemap.GetSprite(localPlace).pixelsPerUnit , tilemap.GetSprite(localPlace).pixelsPerUnit);			
