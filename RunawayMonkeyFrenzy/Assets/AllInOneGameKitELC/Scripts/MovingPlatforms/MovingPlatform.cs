@@ -16,8 +16,16 @@ public class MovingPlatform : MonoBehaviour {
 	
 	[System.Serializable]
 	public class Movement {
-		public Vector3 startPosition; //the Vector3 that the platform starts at (before moving to the end position)
-		public Vector3 endPosition; //the Vector3 that the platform ends at (before moving back to the start position)
+
+		// nwy custom edits
+		public Transform startPoint;
+		public Transform endPoint;
+		// nwy custom edits
+
+		[HideInInspector]
+		public Vector3 startPosition; /// nwy modified //the Vector3 that the platform starts at (before moving to the end position)
+		[HideInInspector]
+		public Vector3 endPosition; /// nwy modified //the Vector3 that the platform ends at (before moving back to the start position)
 		public float movementSpeed = 3; //the speed of the moving platform
 		public float waitingTimeBeforeMoving = 1; //the amount of time the platform waits (once it has reached the start or end position) before moving again
 		public bool startMovingImmediately = true; //for the first time that the platform starts moving, do not wait
@@ -35,6 +43,11 @@ public class MovingPlatform : MonoBehaviour {
 	private bool atStart; //determines if we are at the start position
 	private float waitingTimer; //a timer that measures how long we have been at the start or end position
 	
+	void Awake(){
+		movement.startPosition = movement.startPoint.position;
+		movement.endPosition = movement.endPoint.position;
+	}
+
 	// Use this for initialization
 	void Start () {
 		

@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.Tilemaps;
+
+using System;
 using System.Collections.Generic;
+using System.Collections;
+
 
 public class GenerateTilemap3DCollider : MonoBehaviour {
 
@@ -11,6 +15,7 @@ public class GenerateTilemap3DCollider : MonoBehaviour {
 	public bool setSpawnColor;
 	public float zSpawnPosition = 0;
 	public Vector3 pixelscale; 
+	public bool disableTilemapTextures;
 	private Tilemap tilemap;
 	private GameObject playerTarget;
 
@@ -41,19 +46,34 @@ public class GenerateTilemap3DCollider : MonoBehaviour {
 //				spawnedObject.GetComponent<Renderer>().material.mainTexture = tilemap.GetSprite(localPlace).texture;
 //				spawnedObject.GetComponent<Renderer>().material.mainTextureScale = new Vector2( 54 , 54);
 //				spawnedObject.GetComponent<Renderer>().material.mainTextureScale = new Vector2( tilemap.GetSprite(localPlace).pixelsPerUnit , tilemap.GetSprite(localPlace).pixelsPerUnit);			
-				if(setSpawnColor){
-					spawnedObject.GetComponent<Renderer>().material.SetColor("_Color", tilemap.GetSprite(localPlace).texture.GetPixel(0,0));
+				if(setSpawnColor && spawnedObject && tilemap.GetSprite(localPlace).texture){
+					try
+					{
+						// Do something that can throw an exception
+						spawnedObject.GetComponent<Renderer>().material.SetColor("_Color", tilemap.GetSprite(localPlace).texture.GetPixel(0,0));
+					}
+					catch (Exception e)
+					{
+						Debug.LogException(e, this);
+					}
 				}
 				tileWorldLocations.Add(place);
+
+				
 			}
 		}
 
  		print(tileWorldLocations);   
 		transform.position = new Vector3(transform.position.x,transform.position.y,-0.5f);
 		print("Called");
+		if(disableTilemapTextures == true){
+		 	GetComponent<TilemapRenderer>().enabled = false;
+		 }	
 	}
 
-	// private void Update() {
+	 private void Update() {
+ 
+	 }
 	// 			foreach (var pos in tilemap.cellBounds.allPositionsWithin)
 	// 		{   	
 
