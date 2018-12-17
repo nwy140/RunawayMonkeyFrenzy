@@ -388,6 +388,7 @@ public class Health : MonoBehaviour {
 			//re-enable collider
 			if (disableCollider){
 				GetComponent<Collider>().enabled = true;
+
 			}
 		}
 		

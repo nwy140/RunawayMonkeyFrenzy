@@ -12,6 +12,11 @@ public class LevelManager : MonoBehaviour {
 		MakeInstance();
 	}
 
+	void Update() {
+
+		//Always show mouse on Menu
+
+	}
 	void MakeInstance() {
 		if (instance == null) {
 			instance = this;
@@ -39,6 +44,21 @@ public class LevelManager : MonoBehaviour {
 		Application.LoadLevel (Application.loadedLevel + 1);
 	}
 
+	public void LoadLevelByIndex (int index) {	
+		Debug.Log ("Level Load requeted for index : " + index);
+		Application.LoadLevel (index); 	
+
+		// show mouse on menu
+
+		
+	}	
+
+	public void ShowMouse(){
+		
+		Cursor.visible = true;
+		
+		
+	}
 
 	
 
