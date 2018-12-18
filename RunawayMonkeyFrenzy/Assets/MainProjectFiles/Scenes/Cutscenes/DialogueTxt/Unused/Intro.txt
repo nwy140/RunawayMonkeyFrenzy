@@ -1,0 +1,67 @@
+Intro Cutscene
+Alex; Hi, my name is Alex Smith. I am currently a 19 years old c3rd omputer science student in a manesh university. My parents have been bugging me to find an intenrship lately. Sadly, I can't get any internship because ... 
+Alex: ...
+Alex: Why is it that even though my grades are extremely high, not a single company has even attempted to approach me for an internship?
+"Phone Ringing" "Phone Ringing" "PhoneRinging"
+Choice 
+Pickup 
+Don't Pickup
+if Pickup
+Eh, Alex. You want get a job lah. The currency in Australia is tripple the currenny in Malaysia woi. You ungrateful boy. See how much you can earn if you work in Australia. Eh
+Choice
+Hangup
+Don't Hangup
+Alex: Whatever, I don't care whatever the heck she is nagging me about.
+5 seconds later
+"Received Text Message"
+Sender: Kevin Smith
+You should learn how to use a version control system like git and host your source code on github. Your university course will never teach that to you. Plus, use my zehanort soundboard app as your portfolio, guaranteed to get an internship.
+Alex: So what? If I want to , I can make a better app than him, and get even more downloads than him. Plus. why would I need to use github to host my assignments anyway?  he is not even a computer science student, and he's saying all this things to me. 
+"Alex Lies on the bed and continues to read a motivational book about thinking and growing rich for 5 hours sstraight"
+"Next Morning"
+"Received Text Message"
+Sender: Kevin Smith
+New game I've created. One of the character's design is based on you and your character. Consider it as your chistmas present Download it here: https://bit.ly/aworldnoboundbrower 
+Alex: ... 
+Alex: Hmm...
+Alex: Lately, my brother who thinks he is a self taught programmer that is better than me has been making a bunch of games lately. Just because his stupid zehanort soundboard app has been getting a lot fof downloads on the playstore, doesn't mean much.
+"open and download and plays game"
+...........................
+"Bright light ensues"
+"Whole screen turns white"
+"Alex is sucked into the game"
+Alex: "Wow, aiyaaaaaaaaah"
+"Alex turns his head around"
+Alex: Where the heck am I? Stupid stupid game. Am I in a dream or something.
+WorldCreator: You must pass all the level challenges I present to you in this digital simulation in order to leave this world.  Otherwise, you will be stucked here for eternity until you pass all the challenges. 
+WorldCreator: Now get into that portal and start your first level. Learn to play this game, and learn to pass all the levels. I've trapped a few other people in this game too. See if you can find them. They are playing the game right now too.   
+WorldCreator: Only those who finish game are allowed to leave the game. Just like that game sortartonline.
+"Alex transists into a broken english malaysian accent"
+Alex; WAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA. Woooooooooooooooooooooooooiii. I have a class tomorrow leh. Don't waste my time with this sh....
+Alex: Whatever: Ok Ok lah, 'll play your game lah. 
+Chapter 01 Level 01 Starts
+Alex passes first few missions
+Meets another  player
+Alex; Who are you
+???: DId he trapped you into this world too?
+Alex: You mean my brother?
+???: Who? You mean the guy who created this world?
+Alex: You know him?
+???: Well, I know him from high school.
+Alex; .... Lets pass this level alright. And quickly finish this game.
+'Defeat first boss'
+Alex: Man, this boss sure is tought.
+???: Thanks for helping out. 
+Alex: I got your back.
+???: Maybe we can go back to the older levels and look around for some other people he has trapped in this game?
+Alex: If you want to, well, if we can gather more people into our party, we should be able to finish game faster.
+???: Okay, I'll follow you. 
+Choice
+Go into next level 
+Go into previous level
+To be continued
+.............
+After 25 years of playing the simulatiom
+Future Arc starts
+
+

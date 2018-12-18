@@ -19,8 +19,14 @@ using System.Collections;
 
 public class EnemyAI : MonoBehaviour {
 	
-	public Transform player; //the player in the scene
+	public Transform player ; //the player in the scene
 	
+	//my edits
+	void Awake() {
+		player = GameObject.FindGameObjectWithTag(TagManager.PLAYER_TAG).transform;		
+	}
+	//my edits
+
 	//movement
 	[System.Serializable]
 	public class Movement {

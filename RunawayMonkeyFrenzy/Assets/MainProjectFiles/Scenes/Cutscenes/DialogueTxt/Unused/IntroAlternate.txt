@@ -1,0 +1,10 @@
+[title=Start1]
+Welcome to A World No Bounds
+Player: Where Am I?
+*You are in a world that has no boundaries.*
+Player: ???
+*Feel free to move around and explore this world*
+*Discover its controls, understand its mechanics and keep moving forward untill the end*
+
+
+[title=End1]
