@@ -16,3 +16,4 @@ public class MenuController : MonoBehaviour
 		canvasIndex = startingCanvasIndex; // We set the current canvas index equal to that of the starting canvas index string
 	}
 }
+  

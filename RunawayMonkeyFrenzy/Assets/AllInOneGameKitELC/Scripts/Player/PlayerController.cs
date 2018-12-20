@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour {
 	public float gravity = 20.00f; //the amount of downward force, or "gravity," that is constantly being applied to the player
 	public float slopeLimit = 25.00f; //the maximum angle of a slope you can stand on without sliding down
 	
+
+
 	//Grounded
 	[System.Serializable]
 	public class Grounded {
@@ -91,6 +93,7 @@ public class PlayerController : MonoBehaviour {
 		
 	}
 	
+
 	//Jumping
 	[System.Serializable]
 	public class Jumping {
