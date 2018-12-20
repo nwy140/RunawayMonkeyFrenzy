@@ -13,7 +13,9 @@ public class GenerateTilemap3DCollider : MonoBehaviour {
 // Spawn spawnPrefabs on all tiles on tilemap
 	public GameObject spawnPrefabs; 
 	public bool setSpawnColor;
-	public float zSpawnPosition = 0;
+	public float zSpawnPosition;
+
+
 	public Vector3 pixelscale; 
 	public bool disableTilemapTextures;
 	private Tilemap tilemap;

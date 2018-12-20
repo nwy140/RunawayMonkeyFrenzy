@@ -18,14 +18,30 @@ public class CustomPlayerMechanics : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		LockXPositionOnAttack();
+		MovingPlatformsFix();
 	}
 
 	void LockXPositionOnAttack(){
-		if(playerController.grounded.currentlyGrounded == true && anim.GetCurrentAnimatorStateInfo(0).IsName("Attack")  && (myBody.velocity.x > 0 || myBody.velocity.x < 0) ){
+		if(playerController.grounded.currentlyGrounded == true && anim.GetCurrentAnimatorStateInfo(0).IsName(TagManager.Atk_ANIMATION)  && (myBody.velocity.x > 0 || myBody.velocity.x < 0) ){
 			playerController.movement.sideScrolling.movementSpeedIfAxisLocked = 0;
 		} 
-		if(myBody.velocity.x ==0 || anim.GetCurrentAnimatorStateInfo(0).IsName("Attack") ==false ){
-			playerController.movement.sideScrolling.movementSpeedIfAxisLocked = 6;		
+		if(myBody.velocity.x ==0 || anim.GetCurrentAnimatorStateInfo(0).IsName(TagManager.Atk_ANIMATION) ==false ){
+			playerController.movement.sideScrolling.movementSpeedIfAxisLocked = 4;		
 		}
 	}
+
+	void MovingPlatformsFix(){
+		if( anim.GetCurrentAnimatorStateInfo(0).IsName(TagManager.JUMP_ANIMATION) || anim.GetCurrentAnimatorStateInfo(0).IsName(TagManager.DOUBLEJUMP_ANIMATION)  ){
+			
+			if(playerController.gameObject.transform.parent ){
+			//	myBody.gameObject.transform.parent = null;
+			}
+			
+		}
+
+
+		
+	}
 }
+
+

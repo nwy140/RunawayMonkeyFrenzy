@@ -22,8 +22,10 @@ public class TagManager : MonoBehaviour {
 	public static string FADE_IN_ANIMATION = "FadeIn";
 	public static string STRIKE_ANIMATION = "Strike";
 	public static string SKILL_ANIMATION = "Skill";	
-	public static string Atk_ANIMATION = "Atk";
+	public static string Atk_ANIMATION = "Attack";
 	public static string JUMP_ANIMATION = "Jump";
+	public static string DOUBLEJUMP_ANIMATION = "DoubleJump";
+
 
 	public static string JUMP_BOOL_ANIMPARAM= "Jumping";
 	public static string WALK_BOOL_ANIMPARAM= "Walking";
