@@ -16,6 +16,7 @@ public class TagManager : MonoBehaviour {
 	public static string SPAWNER_TAG = "Spawner";	
 	public static string WORLDBOUNDARY_TAG = "WorldBoundary";
 	public static string LOD_TAG = "LOD";
+	public static string CANVAS_TO_ENABLE_ENDSCENE = "CanvasToEnable";
 
 	public static string FINISHLINE = "FinishLine";
 

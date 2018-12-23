@@ -757,6 +757,7 @@ public class Health : MonoBehaviour {
 	public void LoseHealth () {
 		if (!enabled) return;
 		modifyHealth(-quartersOfHealthToLose);
+		SoundManager.instance.PlayHurtSound(); // my edits
 	}
 	
 	public void ApplyDamage () {
@@ -764,6 +765,8 @@ public class Health : MonoBehaviour {
 		modifyHealth(-enemyAttackPower);
 		canDamage = false;
 		damageTimer = 0.0f;
+		SoundManager.instance.PlayHitSound(); // my edits
+
 	}
 
 	public void BlinkOut() {

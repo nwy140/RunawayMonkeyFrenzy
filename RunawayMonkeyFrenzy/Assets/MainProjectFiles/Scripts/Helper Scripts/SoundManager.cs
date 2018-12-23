@@ -59,7 +59,7 @@ public class SoundManager : MonoBehaviour {
 
 	public void PlayAtkSound(){
 		
-		if(atkSoundManager.isPlaying == false && atkSoundManager){
+		if( atkSoundManager){
 			atkSoundManager.Play();
 
 		}

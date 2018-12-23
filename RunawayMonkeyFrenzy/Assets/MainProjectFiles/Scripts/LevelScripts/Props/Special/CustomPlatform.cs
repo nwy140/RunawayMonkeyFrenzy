@@ -17,7 +17,7 @@ public class CustomPlatform : MonoBehaviour {
 	private void OnTriggerEnter(Collider other) {
 		if(other.gameObject.tag == TagManager.PLAYER_TAG){
 
-			other.transform.parent = transform.parent;
+			other.transform.parent = transform;
 		}
 	}
 

@@ -26,7 +26,10 @@ public class PlayerController : MonoBehaviour {
 	public float gravity = 20.00f; //the amount of downward force, or "gravity," that is constantly being applied to the player
 	public float slopeLimit = 25.00f; //the maximum angle of a slope you can stand on without sliding down
 	
+	// my edits
 
+
+	// my edits
 
 	//Grounded
 	[System.Serializable]
@@ -985,6 +988,7 @@ public class PlayerController : MonoBehaviour {
 			
 			//if the "Jump" button was pressed, jumpPressed equals true
 			if (Input.GetButtonDown("Jump")){
+
 				jumpPressedTimer = 0.0f;
 				jumpPressed = true;
 			}
@@ -1595,6 +1599,8 @@ public class PlayerController : MonoBehaviour {
 						attackedInMidAir = true;
 					}
 					canAttack = false;
+					SoundManager.instance.PlayAtkSound(); //my edits
+
 				}
 			}
 			else if (attackState == 0){
@@ -5188,6 +5194,7 @@ public class PlayerController : MonoBehaviour {
 		currentJumpNumber++;
 		if (animator != null && animator.runtimeAnimatorController != null && outOfWaterTimer > 0){
 			animator.CrossFade("Jump", 0f, -1, 0f);
+			SoundManager.instance.PlayJumpSound(); //my edits
 		}
 		jumpTimer = 0.0f;
 		moveDirection.y = jumpsToPerform[currentJumpNumber - 1];
@@ -5214,6 +5221,8 @@ public class PlayerController : MonoBehaviour {
    
         if (animator != null && animator.runtimeAnimatorController != null){
             animator.CrossFade("DoubleJump", 0f, -1, 0f);
+			SoundManager.instance.PlayJumpSound(); //my edits
+
         }
         if (doubleJumpEffect2 != null){
             Instantiate(doubleJumpEffect2, transform.position + new Vector3(0, 0.2f, 0), doubleJumpEffect2.transform.rotation);

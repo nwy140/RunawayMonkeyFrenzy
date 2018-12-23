@@ -18,7 +18,7 @@ public class CustomPlayerMechanics : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		LockXPositionOnAttack();
-		MovingPlatformsFix();
+	//	CharacterSounds();
 	}
 
 	void LockXPositionOnAttack(){
@@ -30,18 +30,54 @@ public class CustomPlayerMechanics : MonoBehaviour {
 		}
 	}
 
-	void MovingPlatformsFix(){
-		if( anim.GetCurrentAnimatorStateInfo(0).IsName(TagManager.JUMP_ANIMATION) || anim.GetCurrentAnimatorStateInfo(0).IsName(TagManager.DOUBLEJUMP_ANIMATION)  ){
-			
-			if(playerController.gameObject.transform.parent ){
-			//	myBody.gameObject.transform.parent = null;
+	void CharacterSounds(){
+		
+		if( anim.GetCurrentAnimatorStateInfo(0).IsName(TagManager.JUMP_ANIMATION) || anim.GetCurrentAnimatorStateInfo(0).IsName(TagManager.DOUBLEJUMP_ANIMATION) && SoundManager.instance.jumpSoundManager.isPlaying == false ){
+			bool jumpSound = false;
+			if(jumpSound){
+				SoundManager.instance.PlayJumpSound();
+				jumpSound = false;
 			}
 			
 		}
+		if(playerController.attackState > 0 ){
+			SoundManager.instance.PlayAtkSound();
 
-
-		
+		}
 	}
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Archived code
+
+	// void MovingPlatformsFix(){
+	// 	if( anim.GetCurrentAnimatorStateInfo(0).IsName(TagManager.JUMP_ANIMATION) || anim.GetCurrentAnimatorStateInfo(0).IsName(TagManager.DOUBLEJUMP_ANIMATION)  ){
+			
+	// 		if(playerController.gameObject.transform.parent ){
+	// 		//	myBody.gameObject.transform.parent = null;
+	// 		}
+			
+	// 	}	
+	// }
 
 
